@@ -102,7 +102,7 @@
   <div class="container-custom">
     <div class="home">
       <div class="row middle-xs home__hero">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-6 over">
           <div class="home__hero-heading">Do you want to grow your bussiness.</div>
           <div class="home__hero-subheading">We will help you with that.</div>
           <div class="home__hero-para">
@@ -113,7 +113,7 @@
             <img src="~@/assets/icon/arrow-right.svg" alt="">
           </button>
         </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-6 under">
           <div class="home__hero-illustration">
             <img src="~@/assets/illustrations/IllustrationHero.svg" alt="">
           </div>
@@ -469,7 +469,6 @@ export default {
       htmlIconHover: false,
       jsIconHover: false,
       nodeIconHover: false,
-      reactIconHover: false,
       mysqlIconHover: false,
       vueIconHover: false,
       reactIconHover: false,
@@ -480,12 +479,13 @@ export default {
       bootstrapIconHover: false,
     }
   }
-}
+};
 </script>
 
 <style lang="sass">
 .home
   color: var(--text-primary)
+
   &__hero
     min-height: calc(100vh - 200px)
     @media (min-width: 760px)
@@ -535,6 +535,11 @@ export default {
       &-illustration
         width: auto
 
+    .over
+      z-index: 600
+    .under
+      z-index: 500
+    
   //---------------------------------------------------//
   &-cta
     display: flex
