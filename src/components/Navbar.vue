@@ -14,7 +14,7 @@
               <div class="navbar__menu-items-servicesContainer" @mouseenter="menuActive = true" @mouseleave="menuActive = false">
                 <router-link @click="toggle" exact to="/services" class="navbar__menu-item">Services</router-link>
 
-                <transition name="fade">
+                <transition name="fade-drop">
                   <div class="navbar__menu-items-servicesContainer-servicesDropdown" v-if="menuActive">
                      <ul>
                       <router-link :to="'/website-development'">
@@ -227,6 +227,13 @@ export default {
         border-bottom: 3px solid transparent
         color: var(--text-primary)
         position: relative
+
+        .fade-drop-enter-active, .fade-drop-leave-active
+          transition: all .3s
+        .fade-drop-enter, .fade-drop-leave-to 
+          opacity: 0
+          transform: translateY(-20px)
+          transition: all .3s
         
         &-servicesDropdown
           width: 300px
