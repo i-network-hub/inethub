@@ -130,23 +130,107 @@
 
      
       <div class="home-tech flex flex-row justify-between items-center mx-auto m-t-6">
-        <div class="home-tech--item"><img src="~@/assets/icon/amazonaws.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/css3.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/googlecloud.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/html5.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/javascript.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/node-dot-js.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/react.svg" alt=""></div>
+        
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="awsIconHover = true" @mouseleave="awsIconHover = false"><img src="~@/assets/icon/amazonaws.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="awsIconHover">Amazon AWS</div>
+          </transition>
+        </div>
+        
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="cssIconHover = true" @mouseleave="cssIconHover = false"><img src="~@/assets/icon/css3.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="cssIconHover">CSS3</div>
+          </transition>
+        </div>
+        
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="gcloudIconHover = true" @mouseleave="gcloudIconHover = false"><img src="~@/assets/icon/googlecloud.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="gcloudIconHover">GCloud</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="htmlIconHover = true" @mouseleave="htmlIconHover = false"><img src="~@/assets/icon/html5.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="htmlIconHover">HTML5</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="jsIconHover = true" @mouseleave="jsIconHover = false"><img src="~@/assets/icon/javascript.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="jsIconHover">Javascript</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="nodeIconHover = true" @mouseleave="nodeIconHover = false"><img src="~@/assets/icon/node-dot-js.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="nodeIconHover">Node Js</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="reactIconHover = true" @mouseleave="reactIconHover = false"><img src="~@/assets/icon/react.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="reactIconHover">React</div>
+          </transition>
+        </div>
       </div>
       
       <div class="home-tech flex flex-row justify-between items-center mx-auto m-t-6 m-b-h">
-        <div class="home-tech--item"><img src="~@/assets/icon/mysql.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/vue-dot-js.svg" alt=""></div>
-         <div class="home-tech--item"><img src="~@/assets/icon/php.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/django.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/angular.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/android.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/bootstrap.svg" alt=""></div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="mysqlIconHover = true" @mouseleave="mysqlIconHover = false"><img src="~@/assets/icon/mysql.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="mysqlIconHover">React</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="vueIconHover = true" @mouseleave="vueIconHover = false"><img src="~@/assets/icon/vue-dot-js.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="vueIconHover">React</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="phpIconHover = true" @mouseleave="phpIconHover = false"><img src="~@/assets/icon/php.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="phpIconHover">PHP</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="djangoIconHover = true" @mouseleave="djangoIconHover = false"><img src="~@/assets/icon/django.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="djangoIconHover">Django</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="angularIconHover = true" @mouseleave="angularIconHover = false"><img src="~@/assets/icon/angular.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="angularIconHover">Angular</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="androidIconHover = true" @mouseleave="androidIconHover = false"><img src="~@/assets/icon/android.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="androidIconHover">Android</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="bootstrapIconHover = true" @mouseleave="bootstrapIconHover = false"><img src="~@/assets/icon/bootstrap.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="bootstrapIconHover">Bootstrap</div>
+          </transition>
+        </div>
         
       </div>
 
@@ -376,7 +460,26 @@
 
 <script>
 export default {
-  name: 'home'
+  name: 'home',
+  data() {
+    return {
+      awsIconHover: false,
+      cssIconHover: false,
+      gcloudIconHover: false,
+      htmlIconHover: false,
+      jsIconHover: false,
+      nodeIconHover: false,
+      reactIconHover: false,
+      mysqlIconHover: false,
+      vueIconHover: false,
+      reactIconHover: false,
+      phpIconHover: false,
+      djangoIconHover: false,
+      angularIconHover: false,
+      androidIconHover: false,
+      bootstrapIconHover: false,
+    }
+  }
 }
 </script>
 
@@ -481,23 +584,58 @@ export default {
   //--------------------------------------------------//
   &-tech
     width: 100%
+    position: relative
     @media (min-width: 1366px)
       width: 1000px
+
+    &-container
+      position: relative
+      min-width: 50px
+      display: flex
+      align-content: center
     
-    &--item
-      width: 15px
-      @media (min-width: 760px)
-        width: 25px
-      @media (min-width: 1366px)
-        width: 40px
-      img
-        display: block
-        width: 100%
-        height: auto
-        background-size: contain
-      img:hover
-        cursor: pointer
-          
+      &--item
+        width: 15px
+        @media (min-width: 760px)
+          width: 25px
+        @media (min-width: 1366px)
+          width: 40px
+        img
+          display: block
+          width: 100%
+          height: auto
+          background-size: contain
+          transition: filter 0.24s ease-out
+          -webkit-transition: all .24s ease-out
+
+        img:hover
+          cursor: pointer
+          transition: filter 0.24s ease-in
+          -webkit-transition: all .24s ease-in
+          filter: invert(1) opacity(85%)
+
+      &--tooltip
+        position: absolute
+        top: 50px
+        left: -110%
+        z-index: 999
+        color: white
+        padding: 10px
+        min-width: 150px
+        border-radius: 4px
+        background-color: var(--color-blue)
+        text-align: center
+        @media (max-width: 760px)
+          left: -130%
+          top: 30px
+
+    .fade-enter-active, .fade-leave-active
+      transition: opacity .3s
+      transition: all .3s
+    .fade-enter, .fade-leave-to 
+      opacity: 0
+      transform: translateY(-20px)
+      transition: all .24s
 
   //-------------------------------------------------//
   &-section
