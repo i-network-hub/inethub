@@ -1,0 +1,104 @@
+:root
+  //? Colors
+  --color-white: #ffffff
+  --color-black: #0B0B0B
+  --color-black-light: #2A2A2A
+  --color-blue: #0957EA
+  --color-blue-light: #0092FF
+  --color-pink: #D5498F
+  --color-pink-light: #F065A6
+  --color-orange: #FF6748
+  --color-grey-light: #cacaca
+
+  --color-primary: var(--color-blue)
+  --color-secondary: var(--color-black)
+  --color-accent: var(--color-pink)
+
+  --text-primary: var(--color-black-light)
+
+  --hover: 120%
+  --active: 90%
+
+  //? Font Families
+  --font-family: 'Poppins'
+
+  //? Font Sizes
+  --font-xs: 10px
+  --font-sm: 12px
+  --font-md: 14px
+  --font-lg: 16px
+  --font-xl: 20px
+  --font-xxl: 30px
+
+  @media (min-width: 1366px)
+    //? Font Sizes
+    --font-xs: 12px
+    --font-sm: 14px
+    --font-md: 16px
+    --font-lg: 18px
+    --font-xl: 24px
+    --font-xxl: 40px
+
+  //? Line Heights
+  --lh-xs: calc(var(--font-xs)*var(--lh-multiplier))
+  --lh-sm: calc(var(--font-sm)*var(--lh-multiplier))
+  --lh-md: calc(var(--font-md)*var(--lh-multiplier))
+  --lh-lg: calc(var(--font-lg)*var(--lh-multiplier))
+  --lh-cl: calc(var(--font-xl)*var(--lh-multiplier))
+
+
+  //? Font Weights
+  --weight-regular: 400
+  --weight-medium: 500
+  --weight-bold: 700
+  --weight-black: 900
+
+  //? Dimensions
+  --max-width: 1326px
+  --nav-height: 40px
+
+  //? Base Padding size
+  --padding-base: 8px
+  --margin-base: 8px
+
+  //? Border Radius
+  --radius: 0
+  --radius-small: 5px
+
+  //? Z-Index
+  --z-1: 100
+  --z-2: 200
+  --z-3: 300
+  --z-4: 400
+  --z-5: 500
+  --z-6: 600
+  --z-7: 700
+  --z-8: 800
+  --z-9: 900
+
+  //? Padding sizes based on base padding size
+  --p-1: calc(var(--padding-base) * 1)
+  --p-2: calc(var(--padding-base) * 2)
+  --p-3: calc(var(--padding-base) * 3)
+  --p-4: calc(var(--padding-base) * 4)
+  --p-5: calc(var(--padding-base) * 5)
+  --p-6: calc(var(--padding-base) * 6)
+
+  //? Margin sizes based on base margin size
+  --m-1: calc(var(--margin-base) * 1)
+  --m-2: calc(var(--margin-base) * 2)
+  --m-3: calc(var(--margin-base) * 3)
+  --m-4: calc(var(--margin-base) * 4)
+  --m-5: calc(var(--margin-base) * 5)
+  --m-6: calc(var(--margin-base) * 6)
+
+  //? Transitions
+  --t-fast: 0.24s cubic-bezier(.35,.54,.67,.81)
+
+  //? Shadow
+  --shadow--small: 0 4px 12px 0 rgba(0, 0, 0, 0.9)
+
+//? Breakpoints
+$bp-sm: 760px
+$bp-md: 1024px
+$bp-lg: 1200px
