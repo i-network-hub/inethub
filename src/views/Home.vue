@@ -109,7 +109,7 @@
             Here at I Network Technologies we aspire to help you and work with to bring your dream business to a new heights
           </div>
           <button class="home-cta" @click="$router.push('/contact')">
-            Get In Contact With Our Team
+            <span>Get In Contact With Our Team</span>
             <img src="~@/assets/icon/arrow-right.svg" alt="">
           </button>
         </div>
@@ -511,10 +511,18 @@ export default {
       top: 0
       right: 0
       img
-        display: none
+        // display: none
         width: 100%
         height: auto
         background-size: contain
+    @media (max-width: 760px)
+      img
+        width: 200%
+        position: absolute
+        z-index: 5
+        left: 50%
+        clip: rect(0px,400px,455px,0px)
+
     @media (min-width: 760px)
       &-heading
         font-size: 40px
@@ -536,17 +544,20 @@ export default {
         width: auto
 
     div
-      text-shadow: -1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff
+      text-shadow: 1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff
     .over
       z-index: 600
     .under
       z-index: 500
+  @media (max-width: 760px)
+    div
+      text-shadow: none
     
   //---------------------------------------------------//
   &-cta
     display: flex
     flex-direction: row
-    justify-content: center
+    justify-content: space-between
     align-items: center
     border: none
     font-size: var(--font-sm)
@@ -557,8 +568,16 @@ export default {
     padding: var(--p-2) var(--p-3)
     border-radius: var(--radius-small)
     cursor: pointer
+    min-width: 250px
+    margin-right: 0
+    box-sizing: content-box
+    span
+      margin-right: 15px
+      display: inline-block
     img
-      display: block
+      display: inline-block
+      position: relative
+      left: 0
       width: 45px
       margin-left: 15px
       transition: all var(--t-fast)
