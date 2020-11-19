@@ -202,7 +202,7 @@
         </div>
       </div>
 
-    <div class="m-t-h services">
+    <div class="m-t-h services-about">
       <h1>INetwork Hub</h1>
       <p>Analyzing needs, developing in keeping with your needs and more maintaining it.</p>
     </div>
@@ -310,7 +310,7 @@ export default {
 
 <style lang="sass">
 .about-us
-  min-height: calc(100vh - 100px)
+  min-height: calc(100vh - 400px)
 
  
   h1
@@ -355,6 +355,16 @@ export default {
     padding: 50px
     margin: auto
     width: 80%
-  .services
+  .m-t-h.services-about
     margin-top: 200px
+    text-align: center
+    height: 200px
+    box-sizing: content-box
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    h1, p
+      width: 80%
+      height: 50px
+
 </style>
