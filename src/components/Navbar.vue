@@ -1,124 +1,138 @@
 <template>
-  <nav class="navbar" :style="{ 'background-color': navBackground }">
-    <div class="navbar__inner mx-auto">
-      <div class="row middle-xs">
-        <div class="col-xs-6 col-md-2"  @click="$router.push('/')">
-          <img src="~@/assets/icon/logonew.svg" alt="" class="navbar__logo">
-        </div>
-        <div class="col-md-8 center-xs navbar__menu-wrapper ">
-          <div class="navbar__menu">
-            <div class="navbar__menu-items flex flex-row">
-              <router-link @click="toggle" exact to="/" class="navbar__menu-item">Home</router-link>
-              <router-link @click="toggle" exact to="/about" class="navbar__menu-item">About Us</router-link>
+  <div class="container">
+    <nav class="navbar" :style="{ 'background-color': navBackground }">
+      <div class="navbar__inner mx-auto">
+        <div class="row middle-xs">
+          <div class="col-xs-6 col-md-2"  @click="$router.push('/')">
+            <img src="~@/assets/icon/logonew.svg" alt="" class="navbar__logo">
+          </div>
+          <div class="col-md-8 center-xs navbar__menu-wrapper ">
+            <div class="navbar__menu">
+              <div class="navbar__menu-items flex flex-row">
+                <router-link @click="toggle" exact to="/" class="navbar__menu-item">Home</router-link>
+                <router-link @click="toggle" exact to="/about" class="navbar__menu-item">About Us</router-link>
 
-              <div class="navbar__menu-items-servicesContainer" @mouseenter="menuActive = true" @mouseleave="menuActive = false">
-                <router-link @click="toggle" exact to="/services" class="navbar__menu-item">Services</router-link>
+                <div class="navbar__menu-items-servicesContainer" @mouseenter="menuActive = true" @mouseleave="menuActive = false">
+                  <router-link @click="toggle" exact to="/services" class="navbar__menu-item">Services</router-link>
 
-                <transition name="fade-drop">
-                  <div class="navbar__menu-items-servicesContainer-servicesDropdown" v-if="menuActive">
-                     <ul>
-                      <router-link :to="'/website-development'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/html5.svg" alt="HTML5 icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Website Development</div>
-                            <div class="para">Get a webite built for your bussiness.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                  <transition name="fade-drop">
+                    <div class="navbar__menu-items-servicesContainer-servicesDropdown" v-if="menuActive">
+                       <ul>
+                        <router-link :to="'/website-development'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/html5.svg" alt="HTML5 icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Website Development</div>
+                              <div class="para">Get a webite built for your bussiness.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                      <router-link :to="'/website-design'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/css3.svg" alt="CSS3 icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Website Design</div>
-                            <div class="para">Convey personality of your bussiness with a beautifully designed website.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                        <router-link :to="'/website-design'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/css3.svg" alt="CSS3 icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Website Design</div>
+                              <div class="para">Convey personality of your bussiness with a beautifully designed website.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                      <router-link :to="'/application-development'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/android.svg" alt="Android icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Application Development</div>
-                            <div class="para">Mobile application are a great way to be in touch with your customers.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                        <router-link :to="'/application-development'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/android.svg" alt="Android icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Application Development</div>
+                              <div class="para">Mobile application are a great way to be in touch with your customers.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                      <router-link :to="'/search-engine-optimization'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/googlecloud.svg" alt="SEO icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Search Engine Optimization</div>
-                            <div class="para">Get discoverd among millons of others.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                        <router-link :to="'/search-engine-optimization'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/googlecloud.svg" alt="SEO icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Search Engine Optimization</div>
+                              <div class="para">Get discoverd among millons of others.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                      <router-link :to="'/social-media-marketing'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/socialmedia.svg" alt="Social media icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Social Media Marketing</div>
-                            <div class="para">Reach out to your potential customers.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                        <router-link :to="'/social-media-marketing'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/socialmedia.svg" alt="Social media icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Social Media Marketing</div>
+                              <div class="para">Reach out to your potential customers.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                       <router-link :to="'/website-maintenance'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/react.svg" alt="React icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Website Maintenance</div>
-                            <div class="para">Revamp your old website or application.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                         <router-link :to="'/website-maintenance'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/react.svg" alt="React icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Website Maintenance</div>
+                              <div class="para">Revamp your old website or application.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                      <router-link :to="'/databases'">
-                        <li class="service-list-item">
-                          <div class="icon">
-                            <img src="~@/assets/icon/mysql.svg" alt="MySQL icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Databases</div>
-                            <div class="para">Store all your valuble data.</div>
-                          </div>
-                        </li>
-                      </router-link>
+                        <router-link :to="'/databases'">
+                          <li class="service-list-item">
+                            <div class="icon">
+                              <img src="~@/assets/icon/mysql.svg" alt="MySQL icon">
+                            </div>
+                            <div class="content">
+                              <div class="title">Databases</div>
+                              <div class="para">Store all your valuble data.</div>
+                            </div>
+                          </li>
+                        </router-link>
 
-                    </ul>
-                  </div>
-                </transition>
-              </div>             
-            
-              <router-link @click="toggle" exact to="/portfolio" class="navbar__menu-item">Portfolio</router-link>
+                      </ul>
+                    </div>
+                  </transition>
+                </div>             
+              
+                <router-link @click="toggle" exact to="/portfolio" class="navbar__menu-item">Portfolio</router-link>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-xs-6 col-md-2 ">
-          <button class="navbar-cta" @click="$router.push('/contact')">Contact Us</button>
+          <div class="col-xs-6 col-md-2 ">
+            <button class="navbar-cta" @click="$router.push('/contact')">Contact Us</button>
+          </div>
+
+          <div class="navbar-hamburger__icon" @click="toggleActive()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+
+    </nav>
+
+  <app-sidenav class="sidenav" @close="isActive = false" :is-active="isActive"></app-sidenav>
+
+  </div>
 </template>
 
 <script>
+import TheSideNav from "@/components/TheSideNav";
+
 export default {
   name: 'Navbar',
   data () {
@@ -126,7 +140,12 @@ export default {
       isOpen: false,
       navBackground: 1,
       menuActive: false,
+      isActive: false
     }
+  },
+
+  components: {
+    appSidenav: TheSideNav
   },
 
   methods: {
@@ -141,6 +160,9 @@ export default {
       } else {
         this.navBackground = `rgba(255, 255, 255, ${scroll / 100})`
       }
+    },
+    toggleActive() {
+      this.isActive = !this.isActive;
     },
   },
 
@@ -158,6 +180,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.container
+  height: 100%
+  width: 100vw
+  .sidenav
+    min-height: 100vh
+    min-width: 100vw
+    position: absolute
+    top: 0
 .navbar
   display: block
   position: fixed
@@ -174,6 +204,7 @@ export default {
   &__logo
     width: 100px
     font-family: Poppins
+    cursor: pointer
     @media (min-width: 760px)
       width: 120px
     @media (min-width: 1366px)
@@ -305,5 +336,35 @@ export default {
   .router-link-active
     padding: 4px 0
     border-bottom: 3px solid var(--color-primary)
+
+.navbar-hamburger__icon
+  display: none
+  flex-direction: column
+  align-content: center
+  height: 40px
+  width: 40px
+  cursor: pointer
+  position: absolute
+  right: 20px
+
+  span
+    width: 25px
+    height: 3px
+    border-radius: 3px
+    background-color: var(--color-black-light)
+    margin-bottom: 3px
+    position: absolute
+    z-index: 999
+  span:nth-of-type(1)
+    top: 12px
+  span:nth-of-type(2)
+    top: 19px
+  span:nth-of-type(3)
+    top: 26px
+
+@media (max-width: 760px)
+  .navbar-hamburger__icon
+    display: flex
+
 
 </style>
