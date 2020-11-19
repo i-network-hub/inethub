@@ -77,7 +77,7 @@
                         </li>
                       </router-link>
 
-                       <router-link :to="'/website-maintainence'">
+                       <router-link :to="'/website-maintenance'">
                         <li class="service-list-item">
                           <div class="icon">
                             <img src="~@/assets/icon/react.svg" alt="React icon">
@@ -165,7 +165,7 @@ export default {
   left: 0
   width: 100vw
   height: auto
-  padding: 30px
+  padding: 20px 30px 30px
   background-color: var(--color-white)
   z-index: 900
   &__inner

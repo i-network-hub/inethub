@@ -121,9 +121,9 @@
       </div>
 
       <div class="home__invitation">
-        <div class="home__invitation-heading">Build Your Bussiness with us</div>
+        <div class="home__invitation-heading">Build Your Business with us</div>
         <div class="home__invitation-subheading">
-          Bring your bussiness online with us. Lets us take casre of all the hard stuff and you focus on expanding your  bissiness. We specialize in building websites, mobile applications and SEO optimization so that you always stay ahead in the market.
+          Bring your bussiness online with us. Lets us take care of all the hard stuff and you focus on expanding your  business. We specialize in building websites, mobile applications and SEO optimization so that you always stay ahead in the market.
         </div>
         <button class="home-cta" @click="$router.push('/contact')">Get In Contact With Our Sales</button>
       </div>
@@ -184,16 +184,9 @@
       <div class="home-tech flex flex-row justify-between items-center mx-auto m-t-6 m-b-h">
 
         <div class="home-tech-container">
-          <div class="home-tech-container--item" @mouseenter="mysqlIconHover = true" @mouseleave="mysqlIconHover = false"><img src="~@/assets/icon/mysql.svg" alt=""></div>
-          <transition name="fade">
-            <div class="home-tech-container--tooltip" v-if="mysqlIconHover">React</div>
-          </transition>
-        </div>
-
-        <div class="home-tech-container">
           <div class="home-tech-container--item" @mouseenter="vueIconHover = true" @mouseleave="vueIconHover = false"><img src="~@/assets/icon/vue-dot-js.svg" alt=""></div>
           <transition name="fade">
-            <div class="home-tech-container--tooltip" v-if="vueIconHover">React</div>
+            <div class="home-tech-container--tooltip" v-if="vueIconHover">Vue</div>
           </transition>
         </div>
 
@@ -201,6 +194,20 @@
           <div class="home-tech-container--item" @mouseenter="phpIconHover = true" @mouseleave="phpIconHover = false"><img src="~@/assets/icon/php.svg" alt=""></div>
           <transition name="fade">
             <div class="home-tech-container--tooltip" v-if="phpIconHover">PHP</div>
+          </transition>
+        </div>
+
+        <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="androidIconHover = true" @mouseleave="androidIconHover = false"><img src="~@/assets/icon/android.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="androidIconHover">Android</div>
+          </transition>
+        </div>
+
+         <div class="home-tech-container">
+          <div class="home-tech-container--item" @mouseenter="mysqlIconHover = true" @mouseleave="mysqlIconHover = false"><img src="~@/assets/icon/mysql.svg" alt=""></div>
+          <transition name="fade">
+            <div class="home-tech-container--tooltip" v-if="mysqlIconHover">MySQL</div>
           </transition>
         </div>
 
@@ -215,13 +222,6 @@
           <div class="home-tech-container--item" @mouseenter="angularIconHover = true" @mouseleave="angularIconHover = false"><img src="~@/assets/icon/angular.svg" alt=""></div>
           <transition name="fade">
             <div class="home-tech-container--tooltip" v-if="angularIconHover">Angular</div>
-          </transition>
-        </div>
-
-        <div class="home-tech-container">
-          <div class="home-tech-container--item" @mouseenter="androidIconHover = true" @mouseleave="androidIconHover = false"><img src="~@/assets/icon/android.svg" alt=""></div>
-          <transition name="fade">
-            <div class="home-tech-container--tooltip" v-if="androidIconHover">Android</div>
           </transition>
         </div>
 
@@ -535,6 +535,8 @@ export default {
       &-illustration
         width: auto
 
+    div
+      text-shadow: -1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff
     .over
       z-index: 600
     .under
