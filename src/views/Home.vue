@@ -103,7 +103,7 @@
     <div class="home">
       <div class="row middle-xs home__hero">
         <div class="col-xs-12 col-md-6 over">
-          <div class="home__hero-heading">Do you want to grow your bussiness.</div>
+          <div class="home__hero-heading">Do you want to grow your business.</div>
           <div class="home__hero-subheading">We will help you with that.</div>
           <div class="home__hero-para">
             Here at I Network Technologies we aspire to help you and work with to bring your dream business to a new heights
@@ -320,7 +320,7 @@
         </div>
       </section>
 
-       <section class="home-section home-section--webdesign row middle-xs">
+       <section class="home-section home-section--webmaintenance row middle-xs">
         <div class="col-xs-12 col-md-6">
           <img src="~@/assets/illustrations/website-maintainence.svg" alt="" class="home-section__illustration">
         </div>
@@ -335,7 +335,7 @@
         </div>
       </section>
 
-  <section class="home-section home-section--seo row middle-xs">
+  <section class="home-section home-section--databases row middle-xs">
         <div class="col-xs-12 col-md-6">
           <div class="home-section__service">Databases</div>
           <div class="home-section__heading">Don't want to deal with the hassle of managing databases.</div>
@@ -352,7 +352,7 @@
         </div>
       </section>
 
-      <section class="home-section home-section--webdesign row middle-xs">
+      <section class="home-section home-section--scraping row middle-xs">
         <div class="col-xs-12 col-md-6">
           <img src="~@/assets/illustrations/scraping.svg" alt="" class="home-section__illustration">
         </div>
@@ -552,6 +552,8 @@ export default {
   @media (max-width: 760px)
     div
       text-shadow: none
+    .home__hero
+      min-height: calc(100vh - 400px)
     
   //---------------------------------------------------//
   &-cta
@@ -568,8 +570,6 @@ export default {
     padding: var(--p-2) var(--p-3)
     border-radius: var(--radius-small)
     cursor: pointer
-    min-width: 250px
-    margin-right: 0
     box-sizing: content-box
     span
       margin-right: 15px
@@ -581,9 +581,9 @@ export default {
       width: 45px
       margin-left: 15px
       transition: all var(--t-fast)
-    &:hover
-      img
-        margin-left: 30px
+  &-cta:hover
+    img
+      margin-left: 30px
 
   //---------------------------------------------------//
   &__invitation
@@ -665,7 +665,7 @@ export default {
 
   //-------------------------------------------------//
   &-section
-    padding-bottom: 150px
+    padding-bottom: 100px
 
     &__illustration
       display: block
@@ -693,9 +693,16 @@ export default {
       font-weight: var(--weight-regular)
       margin-bottom: 15px
 
+    &--webmaintenance,
+    &--databases,
+    &--scraping
+      img
+        max-width: 550px
+
     @media (max-width: 760px)
       &--webdev,
-      &--seo
+      &--seo,
+      &--databases
         flex-direction: column-reverse
 
   //-----------------------------------------------//
