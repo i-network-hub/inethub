@@ -30,7 +30,9 @@
     line-height: 20px;
 }
 .about-us__services{
- 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 50px 20px;
 }
 .about-us__services .service-card {
@@ -41,6 +43,8 @@
     min-height: 200px;
     margin: 20px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 .about-us__services .service-card__header {
     display: flex;
@@ -93,26 +97,112 @@
         <p>I Network Hub framework helps us to hurry up the project development method and cut back overall development prices. Our main goal is to form advanced computer code solutions that look fantastic and however area unit very easy to use. Our initial priority is to take care of sensible business relations with our correct work.</p>
       </div>
 
-     <div class="about-tech flex flex-row justify-between items-center mx-auto m-t-h">
-        <div class="home-tech--item"><img src="~@/assets/icon/amazonaws.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/css3.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/googlecloud.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/html5.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/javascript.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/node-dot-js.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/react.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/mysql.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/vue-dot-js.svg" alt=""></div>
-         <div class="home-tech--item"><img src="~@/assets/icon/php.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/django.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/angular.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/android.svg" alt=""></div>
-        <div class="home-tech--item"><img src="~@/assets/icon/bootstrap.svg" alt=""></div>
+      <div class="home-tech-box">
         
+        <div class="home-tech flex flex-row justify-between items-center mx-auto m-t-6">
+          
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="awsIconHover = true" @mouseleave="awsIconHover = false"><img src="~@/assets/icon/amazonaws.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="awsIconHover">Amazon AWS</div>
+            </transition>
+          </div>
+          
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="cssIconHover = true" @mouseleave="cssIconHover = false"><img src="~@/assets/icon/css3.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="cssIconHover">CSS3</div>
+            </transition>
+          </div>
+          
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="gcloudIconHover = true" @mouseleave="gcloudIconHover = false"><img src="~@/assets/icon/googlecloud.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="gcloudIconHover">GCloud</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="htmlIconHover = true" @mouseleave="htmlIconHover = false"><img src="~@/assets/icon/html5.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="htmlIconHover">HTML5</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="jsIconHover = true" @mouseleave="jsIconHover = false"><img src="~@/assets/icon/javascript.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="jsIconHover">Javascript</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="nodeIconHover = true" @mouseleave="nodeIconHover = false"><img src="~@/assets/icon/node-dot-js.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="nodeIconHover">Node Js</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="reactIconHover = true" @mouseleave="reactIconHover = false"><img src="~@/assets/icon/react.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="reactIconHover">React</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="vueIconHover = true" @mouseleave="vueIconHover = false"><img src="~@/assets/icon/vue-dot-js.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="vueIconHover">Vue</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="phpIconHover = true" @mouseleave="phpIconHover = false"><img src="~@/assets/icon/php.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="phpIconHover">PHP</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="androidIconHover = true" @mouseleave="androidIconHover = false"><img src="~@/assets/icon/android.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="androidIconHover">Android</div>
+            </transition>
+          </div>
+
+           <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="mysqlIconHover = true" @mouseleave="mysqlIconHover = false"><img src="~@/assets/icon/mysql.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="mysqlIconHover">MySQL</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="djangoIconHover = true" @mouseleave="djangoIconHover = false"><img src="~@/assets/icon/django.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="djangoIconHover">Django</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="angularIconHover = true" @mouseleave="angularIconHover = false"><img src="~@/assets/icon/angular.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="angularIconHover">Angular</div>
+            </transition>
+          </div>
+
+          <div class="home-tech-container">
+            <div class="home-tech-container--item" @mouseenter="bootstrapIconHover = true" @mouseleave="bootstrapIconHover = false"><img src="~@/assets/icon/bootstrap.svg" alt=""></div>
+            <transition name="fade">
+              <div class="home-tech-container--tooltip" v-if="bootstrapIconHover">Bootstrap</div>
+            </transition>
+          </div>
+  
+        </div>
       </div>
 
-
-    <div class="m-t-h">
+    <div class="m-t-h services-about">
       <h1>INetwork Hub</h1>
       <p>Analyzing needs, developing in keeping with your needs and more maintaining it.</p>
     </div>
@@ -196,13 +286,31 @@
 
 <script>
 export default {
-  name: 'About'
-}
+  name: 'About',
+  data() {
+    return {
+      awsIconHover: false,
+      cssIconHover: false,
+      gcloudIconHover: false,
+      htmlIconHover: false,
+      jsIconHover: false,
+      nodeIconHover: false,
+      mysqlIconHover: false,
+      vueIconHover: false,
+      reactIconHover: false,
+      phpIconHover: false,
+      djangoIconHover: false,
+      angularIconHover: false,
+      androidIconHover: false,
+      bootstrapIconHover: false,
+    }
+  }
+};
 </script>
 
 <style lang="sass">
 .about-us
-  min-height: calc(100vh - 100px)
+  min-height: calc(100vh - 400px)
 
  
   h1
@@ -235,5 +343,28 @@ export default {
         height: auto
         background-size: contain
         transition: all .24s ease-in-out
+
+  .home-tech-box
+    width: 100vw
+    position: absolute
+    left: 0
+    display: flex
+    justify-content: center
+    background-color: rgb(240, 240, 240)
+  .home-tech
+    padding: 50px
+    margin: auto
+    width: 80%
+  .m-t-h.services-about
+    margin-top: 200px
+    text-align: center
+    height: 200px
+    box-sizing: content-box
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    h1, p
+      width: 80%
+      height: 50px
 
 </style>

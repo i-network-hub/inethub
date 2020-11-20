@@ -57,7 +57,7 @@
           </div>
            <div class="social-media__info__two ">
             <h3 class=" m-t-6">How do I know what’s right for my business ?</h3>
-            <p class="col-md-8">If you’ve checked out alternative social promoting corporations in I Network Hub, you may be unsure as to who the most effective package for your business.</p>
+            <p>If you’ve checked out alternative social promoting corporations in I Network Hub, you may be unsure as to who the most effective package for your business.</p>
           </div>
              <div class="social-media__info__two ">
             <h3 class="text-center m-t-6">You’ll keep your budget in mind. what quantity of your promoting budget are you able to pay on social media ?</h3>
