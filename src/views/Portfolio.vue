@@ -33,17 +33,19 @@
       <img src="~@/assets/images/wow.jpg" alt="WOW!">
       <p><a href="http://www.wowwordsofwise.co.in/" target="_blank" >WOW! Words Of Wise</a></p> 
       </a>
+      
        <a href="https://banarsi-dhaba.herokuapp.com/" target="_blank" class="website">
       <img src="~@/assets/images/banarsidhaba.jpg" alt="BanarsiDhaba">
       <p><a href="https://banarsi-dhaba.herokuapp.com/" target="_blank" >Banarsi Dhaba</a></p> 
       </a>
-
+      
       <a href="http://www.suryapharmalimited-tz.com/" target="_blank" class="website">
       <img src="~@/assets/images/suryapharma.jpg" alt="SuryaPharma">
       <p><a href="http://www.suryapharmalimited-tz.com/" target="_blank" >Surya Pharma Limited</a></p> 
       </a>
+    
+       <h1 class="m-t-6 m-r-4"> &amp; Many More... </h1>
 
-      <h1 class="m-t-6"> &amp; Many More... </h1>
 
   </div>
   </div>

@@ -87,14 +87,23 @@
   top: 0;
   left: calc(25% - 100px);
   opacity: 0;
-  animation: display 10s infinite;
+  animation: display 9s infinite;
 }
 
 .pic:nth-child(1) {
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 .pic:nth-child(2) {
-  animation-delay: 4s;
+  animation-delay: 6s;
+}
+@media (max-width: 760px) {
+  .pic-ctn > .pic {
+    left: -5%;
+    margin: 0 70px 0 10px;
+  }
+  .image {
+    display: none;
+  }
 }
 
 </style>
@@ -293,7 +302,7 @@
         </div>
         <div class="col-xs-12 col-md-6">
           <div class="home-section__service">Web & Graphic Design</div>
-          <div class="home-section__heading">want a beautiful website or an eye catching graphic</div>
+          <div class="home-section__heading">Want a beautiful website or an eye catching graphic</div>
           <div class="home-section__description">
             Having a beautiful and good looking website draws attention and make your look professional and trust worthy. Or team strives to delivery the best we can and bring you ahead of the crowd.
           </div>
@@ -402,13 +411,14 @@
       <div class="pic">
         <div class="home__bottom m-t-6 mx-auto ">
         <div class="home__bottom-subheading max-auto">"Really appreciated the work done by you, Super-fast and efficient scraping project results, these guys are phenomenal to work with. I feel that they bend over backwards to help you. Highly recommend INetwork Hub."</div>
+        <div class="image">
           <div class="profile">
           <img src="~@/assets/images/21-512.png" alt="">
           </div>
           <div class="quote">
             <img src="~@/assets/icon/quote-left-solid.png" alt="">
           </div>
-        
+        </div>
         <div class="name">Mr. Tim Warren </div> 
         <div class="post">Marketing Head – Discount fiber (US) </div>
     
@@ -418,13 +428,14 @@
       <div class="pic">
         <div class="home__bottom m-t-6 mx-auto ">
         <div class="home__bottom-subheading max-auto">"Highly professional brand development with their design and implementation...very strategic, creative and engaged. I highly recommend them as a part of structuring development team of your new business or project"</div>
+         <div class="image">
           <div class="profile">
           <img src="~@/assets/images/patidar.jpeg" alt="">
           </div>
           <div class="quote">
             <img src="~@/assets/icon/quote-left-solid.png" alt="">
           </div>
-        
+        </div>
         <div class="name">Mr. Priyank Patidar  </div> 
         <div class="post">SDE – Amagi Media Labs </div>
     
@@ -434,12 +445,14 @@
       <div class="pic">
         <div class="home__bottom m-t-6 mx-auto ">
         <div class="home__bottom-subheading max-auto">"It’s a complete satisfaction to work with you guys. I am very much impressed by the quality you have provided for my website. I founded its very creative & modern. I will suggest all to work with you guys! Appreciate and good luck for INetwork Hub Team."</div>
-          <div class="profile">
-          <img src="~@/assets/images/21-512.png" alt="">
-          </div>
-          <div class="quote">
-            <img src="~@/assets/icon/quote-left-solid.png" alt="">
-          </div>
+         <div class="image">
+              <div class="profile">
+                <img src="~@/assets/images/21-512.png" alt="" />
+              </div>
+              <div class="quote">
+                <img src="~@/assets/icon/quote-left-solid.png" alt="" />
+              </div>
+            </div>
         
         <div class="name">Mr. Bharat Dhakad </div> 
         <div class="post">Founder- Trinity Real Estate </div>

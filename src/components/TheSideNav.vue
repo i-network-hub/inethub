@@ -28,6 +28,8 @@
             <div class="item" @click="closeSideMenuStateChanges()"><router-link :to="'/social-media-marketing'">Social Media Marketing</router-link></div>
             <div class="item" @click="closeSideMenuStateChanges()"><router-link :to="'/website-maintenance'">Website Maintenance</router-link></div>
             <div class="item" @click="closeSideMenuStateChanges()"><router-link :to="'/databases'">Databases</router-link></div>
+            <div class="item" @click="closeSideMenuStateChanges()"><router-link :to="'/web-scraping'">Web Scraping</router-link></div>
+            <div class="item" @click="closeSideMenuStateChanges()"><router-link :to="'/content-writing'">Content Writing</router-link></div>
           </div>
         </transition>
       </div>

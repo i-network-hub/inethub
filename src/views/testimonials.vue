@@ -49,7 +49,7 @@
         <div class="post">CEO & Founder – Banarsi Dhaba </div>
                 </div>
                 <div class="testimonial-detail">
-                   
+                     <img src="~@/assets/images/21-512.png" alt="">
                 </div>
                 
             </div>
@@ -142,13 +142,9 @@ Thank you INetwork Hub and its' team, much love❤️ "</p>
         
     &-detail
         padding: 20px
-        
+
         img
             width: 250px
             height: 250px
-
-
-    
- 
-    
+            border-radius: 50%
 </style>
