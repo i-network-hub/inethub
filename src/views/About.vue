@@ -345,16 +345,18 @@ export default {
         transition: all .24s ease-in-out
 
   .home-tech-box
-    width: 100vw
+    width: 100%
     position: absolute
     left: 0
     display: flex
-    justify-content: center
+    justify-content: space-between
     background-color: rgb(240, 240, 240)
   .home-tech
-    padding: 50px
+    padding: 50px 0px
     margin: auto
-    width: 80%
+    width: 90%
+  .home-tech-container
+    min-width: 20px
   .m-t-h.services-about
     margin-top: 200px
     text-align: center
