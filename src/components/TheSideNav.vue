@@ -83,7 +83,7 @@
     z-index: 1000;
     display: flex;
     right: -50vw;
-    width: 70%;
+    width: 80vw;
     height: 100%;
     min-width: 180px;
     padding: 70px 30px;
@@ -184,7 +184,7 @@
     width: 240px;
     height: 300px;
     position: relative;
-    left: 20px;
+    left: 5px;
   }
 
   .services img {
