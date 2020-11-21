@@ -115,7 +115,8 @@
         </div>
         <div class="col-xs-12 col-md-6 under">
           <div class="home__hero-illustration">
-            <img src="~@/assets/illustrations/IllustrationHero.svg" alt="">
+            <img src="~@/assets/illustrations/IllustrationHero.svg" class="home__hero-illustration-desktop" alt="Hero illustration">
+          	<img src="~@/assets/icon/hero-small.svg" class="home__hero-illustration-mobile" alt="Hero illustration mobile">
           </div>
         </div>
       </div>
@@ -506,23 +507,23 @@ export default {
       font-size: 14px
       font-weight: var(--weight-regular)
     &-illustration
-      width: 650px
       position: absolute
       top: 0
       right: 0
+      width: 650px
+      height: auto
+      overflow: hidden
+      &-desktop
+        height: auto
+        background-size: contain
+        display: block
+        width: 100%
+      &-mobile
+        display: none
       img
-        // display: none
         width: 100%
         height: auto
         background-size: contain
-    @media (max-width: 760px)
-      img
-        width: 200%
-        position: absolute
-        z-index: 5
-        left: 50%
-        clip: rect(0px,400px,455px,0px)
-
     @media (min-width: 760px)
       &-heading
         font-size: 40px
@@ -530,7 +531,7 @@ export default {
         font-size: 20px
       &-para
         font-size: 16px
-      &-illustration
+      &-illustration-desktop
         img
           display: block
     @media (min-width: 1400px)
@@ -554,6 +555,16 @@ export default {
       text-shadow: none
     .home__hero
       min-height: calc(100vh - 400px)
+      &-illustration-desktop
+        display: none
+      &-illustration-mobile
+        display: block
+        height: auto
+        width: 110%
+        background-size: contain
+        margin-left: 90px
+        margin-top: -120px
+        transform: rotate(15deg)
     
   //---------------------------------------------------//
   &-cta
